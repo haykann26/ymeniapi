@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view( 'ymeni.welcome' );
+//    return view( 'ymeni.welcome' );
 });
+
+Route::get( '{any}', function ( $param ) {
+    return $param;
+})->where('any', '.*');
 
 Auth::routes();
 
