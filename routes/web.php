@@ -17,10 +17,17 @@ Route::get('/', function () {
 //    return view( 'ymeni.welcome' );
 });
 
-Route::get( '{any}', function ( $param ) {
-    return $param;
-})->where('any', '.*');
 
 Auth::routes();
 
 //Route::get( '/home', 'HomeController@index' )->name('home');
+
+Route::get( 'cssgrid' , function () {
+
+    return view('cssgrid');
+} );
+
+
+Route::get( '{any}', function ( $param ) {
+    return $param;
+})->where('any', '.*');
