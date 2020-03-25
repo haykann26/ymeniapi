@@ -22,9 +22,10 @@
 
         .grid-container {
             display: grid;
-            max-width:960px;
+            max-width:95%;
             margin:0 auto;
-            grid-template-columns: repeat(9, 1fr);
+            grid-template-columns: repeat(9,1fr);
+            grid-gap:5px;
         }
 
         .grid-container > .grid-item {
@@ -37,6 +38,25 @@
         .grid-container .grid-item:nth-child(even) {
             background-color:cornflowerblue;
         }
+
+        @media only screen and ( min-width:100px ) {
+            .grid-container {
+                grid-template-columns: 1fr ;
+            }
+        }
+
+        @media only screen and ( min-width:720px ) {
+            .grid-container {
+                grid-template-columns: repeat(4, 1fr) ;
+            }
+        }
+
+        @media only screen and ( min-width:996px ) {
+            .grid-container {
+                grid-template-columns: repeat(9, 1fr) ;
+            }
+        }
+
     </style>
 </head>
 <body>
